@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+                overflow: hidden;
+
+            }
+            h1,h2,h3,h4 {
+                color: white; 
+                justify-content: center;
+                display: flex; 
+                
+                justify-content:flex-start;
+            }
+            
+            .container{
+                font-size: 15px;
+                width: 40em;
+                height: 40em;
+                position: relative;
+            }
+            .sun{
+                position: absolute;
+                top: 15em;
+                left: 15em;
+                width: 10em;
+                height: 10em;
+                background-color: yellow;
+                justify-content: center;
+                border-radius: 50%;
+                box-shadow: 0 0 7em white;
+            }
+            .earth,.moon {
+                position: absolute;
+                border-style: solid;
+                border-color: white
+                transparent
+                transparent
+                transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+            }
+            .earth {
+                top: 5em;
+                left: 5em;
+                width: 30em;
+                height: 30em;
+                animation: orbit 36s linear infinite;
+            }
+            .moon {
+                top: 0;
+                right: 0;
+                width: 8em;
+                height: 8em;
+                animation: orbit 2.7s linear infinite;
+            }
+            .earth::before,
+            .moon::before {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+            }
+            .earth::before {
+                top: 2.8em;
+                right: 2.8em;
+                width: 3em;
+                height: 3em;
+                background-color: aqua;
+            }
+            .moon::before {
+                top: 0.8em;
+                right: 0.2em;
+                width: 1.2em;
+                height: 1.2em;
+                background-color: silver;
+            }
+            @keyframes orbit{
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+    
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+                z-index: 1;
+            }
+    
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+               
+    </head>
+    <body>
+        <div class="dropdown">
+            <a href="#">Tecnologias</a>
+            <div class="dropdown-content">
+                <a href="#">Angular</a>
+                <a href="#">.Net(C#)</a>
+                <a href="#">SQLServer</a>
+                <a href="#">Azure Devops</a>
+            </div>
+        </div>
+       <div class="container">
+            <h1>Fabricius Felix</h1>
+            <br>
+            <h3>FullStack .Net Developer</h3>
+            
+            <h4>Site em desenvolvimento</h4>    
+            <a>Tecnologias: Angular , </a>
+            <div class="header">
+                <div class="sun"></div>
+                <div class="earth">
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
