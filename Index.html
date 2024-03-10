@@ -47,6 +47,24 @@
                 border-width: 0.1em 0.1em 0 0;
                 border-radius: 50%;
             }
+            .mars {
+                display: flex;
+                position: absolute;
+                border-style: solid;
+                border-color: white
+                transparent
+                transparent
+                transparent;
+                border-width: 0.2em 0.2em 0 0;
+                border-radius: 50%;
+            }
+            .mars {
+                top: -5em;
+                left: -5em;
+                width: 50em;
+                height: 50em;
+                animation: orbit 30s linear infinite;
+            }
             .earth {
                 top: 5em;
                 left: 5em;
@@ -62,7 +80,8 @@
                 animation: orbit 2.7s linear infinite;
             }
             .earth::before,
-            .moon::before {
+            .moon::before,
+            .mars::before {
                 content: '';
                 position: absolute;
                 border-radius: 50%;
@@ -73,6 +92,13 @@
                 width: 3em;
                 height: 3em;
                 background-color: aqua;
+            }
+            .mars::before {
+                top:6em;
+                right: 6em;
+                width: 2.8em;
+                height: 2.8em;
+                background-color: rgb(207, 123, 27);
             }
             .moon::before {
                 top: 0.8em;
@@ -126,6 +152,7 @@
             <a>Tecnologias: Angular , </a>
             <div class="header">
                 <div class="sun"></div>
+                <div class="mars"></div>
                 <div class="earth">
                     <div class="moon"></div>
                 </div>
